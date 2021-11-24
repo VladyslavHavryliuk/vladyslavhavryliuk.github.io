@@ -1,0 +1,19 @@
+{
+  "name": "avenga-radio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stilet00/avenga-radio.git"
+  },
+  "author": "stilet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stilet00/avenga-radio/issues"
+  },
+  "homepage": "https://github.com/stilet00/avenga-radio#readme"
+}

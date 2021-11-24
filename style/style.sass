@@ -1,0 +1,97 @@
+@font-face
+  font-family: 'TT Hoves DemiBold'
+  src: url('../fonts/TTHoves-DemiBold.woff2') format("woff2"), url('../fonts/TTHoves-DemiBold.woff') format("woff")
+  font-weight: 600
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: 'TT Hoves Regular'
+  src: url('../fonts/TTHoves-Regular.woff2') format("woff2"), url('../fonts/TTHoves-Regular.woff') format("woff")
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+
+body
+  margin: 0
+.flex-column
+  display: flex
+  flex-direction: column
+footer
+
+button
+  padding: 0
+  border: none
+  font: inherit
+  color: inherit
+  background-color: transparent
+  cursor: pointer
+.container
+  position: relative
+  height: 100vh
+  width: 100vw
+  background-color: #E5E5E5
+  background-image: url("../images/Illustration.svg")
+  background-position: bottom
+  background-size: 100%
+  background-repeat: no-repeat
+.nav-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 32px 0 32px
+  margin-top: 31px
+  .logo
+    width: 164px
+    height: 50px
+  a
+    margin-left: 18px
+  .social-icon
+    width: 44px
+    height: 44px
+.radio-container
+  height: 70vh
+  justify-content: center
+  .play-pause-button
+    margin: 0 auto 48px auto
+    width: 240px
+    height: 240px
+    background-image: url("../images/button-play.svg")
+    .paused
+      background-image: url("../images/button-stop.svg")
+
+
+  .song-info
+    justify-content: space-between
+    height: 64px
+    p
+      text-align: center
+      margin: 0
+      padding: 0
+      height: 28px
+      color: #191919
+      font-size: 24px
+      line-height: 28.27px
+  .singer
+    font-family: "TT Hoves DemiBold"
+  .song
+    font-family: "TT Hoves Regular"
+
+
+.winter
+  &::after
+    position: absolute
+    content: url("")
+    width: 100%
+    height: 100%
+    z-index: 1000
+    background-size: cover
+    background-position: center
+    background-image: url("../images/snow-3.png"), url("../images/snow-2.png")
+    animation: snow 20s linear infinite
+@keyframes snow
+  0%
+    background-position: 0px 0px, 0px 0px, 0px 0px
+
+  100%
+    background-position: 500px 1000px, 400px 400px, 300px 300px
