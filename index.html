@@ -1,32 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avenga radio</title>
     <link rel="stylesheet" href="style/style.css" />
-</head>
-<body>
-    <div class="container flex-column">
-        <header class="nav-header">
-            <div>
-                <a href="">
-                    <img src="images/logo.svg" alt="Avenga" class="logo"></div>
-                </a>
-            <nav class="social-links">
-                <a href="" target="_blank"><img src="images/facebook.svg" alt="facebook" class="social-icon"></a>
-                <a href="" target="_blank"><img src="images/instagram.svg" alt="instagram" class="social-icon"></a>
-                <a href="" target="_blank"><img src="images/linkedin.svg" alt="linkedin" class="social-icon"></a>
-            </nav>
-        </header>
-        <main class="radio-container flex-column">
-           <button class="play-pause-button"></button>
-            <div class="song-info flex-column">
-                <p class="singer"><strong>John legend & robots</strong></p>
-                <p class="song">Compared to what</p>
-            </div>
-        </main>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="radio-container d-flex flex-column justify-content-between">
+      <header class="d-flex justify-content-between pt-3 header">
+        <a href="" class="header__avenga-logo"></a>
+        <nav
+          class="header__social-links d-none d-sm-flex justify-content-between"
+        >
+          <a href="" target="_blank" class="social-link facebook"></a>
+          <a href="" target="_blank" class="social-link instagram"></a>
+          <a href="" target="_blank" class="social-link linkedin"></a>
+        </nav>
+      </header>
+      <main class="main">
+        <button
+          type="button"
+          class="radio-control-button mx-auto px-0"
+          id="main-button"
+        ></button>
+        <div class="radio-control-button__song-info">
+          <p class="radio-control-button__song-info--song">
+            <strong>John legend & robots</strong>
+          </p>
+          <p class="radio-control-button__song-info--singer">
+            Compared to what
+          </p>
+        </div>
+      </main>
+      <footer class="footer d-flex justify-content-center align-items-center">
+        <nav
+          class="
+            footer__social-links
+            d-flex d-sm-none
+            mx-auto
+            justify-content-between
+          "
+        >
+          <a
+            href=""
+            target="_blank"
+            class="social-link social-link--footer_placed facebook"
+          ></a>
+          <a
+            href=""
+            target="_blank"
+            class="social-link social-link--footer_placed instagram"
+          ></a>
+          <a
+            href=""
+            target="_blank"
+            class="social-link social-link--footer_placed linkedin"
+          ></a>
+        </nav>
+      </footer>
     </div>
 
-
-</body>
+    <script src="index.js" />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
