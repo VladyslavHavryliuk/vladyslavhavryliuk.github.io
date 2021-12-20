@@ -20,3 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   observer.observe(scriptNameNode, eventConfig);
 });
+
+window.getRadioStatus = () => {
+  fetch('https://myradio24.com/users/2925/status.json')
+    .then(res => res.json())
+    .then(out => console.log(out))
+    .catch(err => console.error(err));
+};
