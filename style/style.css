@@ -43,10 +43,10 @@
   animation: snow 200s linear infinite;
   background-image:
     url("../images/snow-1.png"),
-    url("../images/snow-5.png"),
+    url("../images/snow-7.png"),
     url("../images/snow-2.png"),
-    url("../images/snow-3.png"),
-    url("../images/snow-4.png");
+    url("../images/snow-8.png"),
+    url("../images/snow-6.png");
   background-position: center;
   background-size: auto;
   background-repeat: repeat;
