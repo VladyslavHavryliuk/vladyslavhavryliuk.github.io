@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   let oldSongName = '';
+  const displayNoneClass = 'd-none';
   const scriptNameNode = document.querySelector('div[data-myinfo="song"]');
   const songNode = document.querySelector('.song-info .song');
   const artistNode = document.querySelector('.song-info .artist');
@@ -11,10 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new MutationObserver((mutationList, observer) => {
     for (const mutation of mutationList) {
       if (mutation.type === 'childList' && mutation.target.textContent !== oldSongName) {
-        const splitName = mutation.target.textContent.split(' - ');
         oldSongName = mutation.target.textContent;
-        artistNode.innerHTML = splitName[0];
-        songNode.innerHTML = splitName[1];
+        const splitName = mutation.target.textContent.split(' - ');
+        if (splitName.length > 1) {
+          if (artistNode.classList.contains(displayNoneClass)) {
+            artistNode.classList.remove(displayNoneClass);
+          }
+          artistNode.innerHTML = splitName[0];
+          songNode.innerHTML = splitName.slice(1, splitName.length).join(' - ');
+        } else {
+          songNode.innerHTML = mutation.target.textContent;
+          artistNode.classList.add(displayNoneClass);
+        }
       }
     }
   });
