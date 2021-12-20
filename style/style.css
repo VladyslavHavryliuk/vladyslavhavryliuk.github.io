@@ -160,59 +160,6 @@ main .song-info p {
   font-family: 'TT Hoves Regular', sans-serif;
 }
 
-main .volume-slider {
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 250px;
-  height: 30px;
-}
-
-main .volume-slider .minus {
-  width: 1.5rem;
-  margin-right: 1rem;
-}
-
-main .volume-slider .plus {
-  width: 1.5rem;
-  margin-left: 1rem;
-}
-
-main .volume-slider .my_volumediv,
-main .volume-slider .my_volume {
-  width: calc(100% - ((1.5rem + 1rem) * 2));
-}
-
-main .volume-slider .my_volumediv {
-  position: relative;
-  height: 5px;
-  cursor: pointer;
-  user-select: none;
-  border-radius: 10px;
-  background: #555555;
-}
-
-main .volume-slider .my_volume {
-  position: absolute;
-  bottom: 0;
-  height: 5px;
-  cursor: pointer;
-  border-radius: 10px;
-  background: #2ecc71;
-}
-
-main .volume-slider .my_volumecursor {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  margin-top: -8px;
-  cursor: pointer;
-  border-radius: 20px;
-  outline: none;
-  background: #ffffff;
-}
-
 footer {
   z-index: 1;
   width: 100%;
