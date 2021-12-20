@@ -1,10 +1,10 @@
 # Avenga radio
-This project consists of:
-1. index.html - main file.
-2. style/style.css
-3. Images folder
-4. Fonts folder
-5. index.js - dev file to test radio button.
+### Description
+Avenga radio is simple single page web app for listening songs online from set sources from [myradio24.com](https://myradio24.com/). Also, this radio designed for broadcast podcasts or greetings from people on holidays.
 
-# To run this poroject
+### Development stack
+- Bootstrap v4.0.0 - CSS only
+- Player.js - player script from [myradio24.com](https://myradio24.com/ru/set)
+
+### To run this project
 Open index.html in browser.
