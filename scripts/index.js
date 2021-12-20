@@ -28,4 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   observer.observe(scriptNameNode, eventConfig);
+
+  // Remove listening timer from player.js
+  setTimeout(() => {
+    document.querySelector('div.my_timer').remove();
+  }, 1000);
 });
