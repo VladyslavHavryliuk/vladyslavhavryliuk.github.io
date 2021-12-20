@@ -1,12 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-  let button = document.getElementById("main-button");
-  button.addEventListener("click", () => {
-    button.classList.toggle("playing");
-    let singer = document.querySelector(".radio-control-button__song-info--singer");
-    let song = document.querySelector(".radio-control-button__song-info--song");
-    song.innerText = song.innerText === "All that she wants" ? " Not playing " : "All that she wants";
-    singer.innerText = singer.innerText === "Ace of Base" ? " " : "Ace of Base";
+  let oldSongName = '';
+  const scriptNameNode = document.querySelector('div[data-myinfo="song"]');
+  const songNode = document.querySelector('.song-info .song');
+  const artistNode = document.querySelector('.song-info .artist');
+  const eventConfig = {
+    attributes: true,
+    childList: true,
+    subtree: true,
+  };
+  const observer = new MutationObserver((mutationList, observer) => {
+    for (const mutation of mutationList) {
+      if (mutation.type === 'childList' && mutation.target.textContent !== oldSongName) {
+        const splitName = mutation.target.textContent.split(' - ');
+        oldSongName = mutation.target.textContent;
+        artistNode.innerHTML = splitName[0];
+        songNode.innerHTML = splitName[1];
+      }
+    }
   });
-
-  console.log(button.className);
+  observer.observe(scriptNameNode, eventConfig);
 });

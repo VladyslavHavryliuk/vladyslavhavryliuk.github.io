@@ -15,51 +15,59 @@
 </head>
 <body>
 <div class="radio-container radio-container--winter d-flex flex-column justify-content-between">
-  <header class="d-flex justify-content-between pt-3 header">
-    <a class="header__avenga-logo z-200" href="https://www.avenga.com/career/ukraine/"></a>
+  <header class="d-flex justify-content-between pt-3">
+    <a class="header__avenga-logo" href="https://www.avenga.com/career/ukraine/"></a>
     <nav class="header__social-links d-none d-sm-flex justify-content-between">
-      <a class="social-link facebook z-200" href="https://www.facebook.com/AvengaGlobal/" target="_blank"></a>
-      <a class="social-link instagram z-200" href="https://www.instagram.com/avenga_global/" target="_blank"></a>
-      <a class="social-link linkedin z-200" href="https://www.linkedin.com/company/avenga/about/" target="_blank"></a>
+      <a class="social-link facebook" href="https://www.facebook.com/AvengaGlobal/" target="_blank"></a>
+      <a class="social-link instagram" href="https://www.instagram.com/avenga_global/" target="_blank"></a>
+      <a class="social-link linkedin" href="https://www.linkedin.com/company/avenga/about/" target="_blank"></a>
     </nav>
   </header>
-  <main class="main">
-    <button
-      class="radio-control-button z-200 mx-auto px-0"
-      id="main-button"
-      type="button"
-    ></button>
-    <div class="radio-control-button__song-info z-200">
-      <p class="radio-control-button__song-info--song">
-        <strong>John legend & robots</strong>
-      </p>
-      <p class="radio-control-button__song-info--singer">
-        Compared to what
-      </p>
+
+  <main class="d-flex flex-column align-items-center">
+    <div
+      class="my_player d-flex flex-column align-items-center"
+      data-autoplay="1"
+      data-player="custom"
+      data-streamurl="https://myradio24.org/2925"
+      data-volume="100"
+      id="my_player_custom"
+    ></div>
+
+    <div
+      class="d-none"
+      data-imagesurl="{ 'play': './images/play.svg', 'pause': './images/pause.svg' }"
+      id="my_player_custom_html"
+    >
+      <div class="my_play"></div>
+      <div class="my_timer bold-font">00:00</div>
+      <div class="volume-slider">
+        <div class="minus">&#10134;</div>
+        <div class="my_volumediv">
+          <div class="my_volume"></div>
+          <div class="my_volumecursor" style="width: 20px"></div>
+        </div>
+        <div class="plus">&#10133;</div>
+      </div>
+      <div class="song-info">
+        <p class="song bold-font"></p>
+        <p class="artist regular-font"></p>
+      </div>
+      <div class="regular-font">Next: <span data-myinfo="nextsong"></span></div>
+      <div class="bold-font d-none" data-myinfo="song"></div>
     </div>
   </main>
-  <footer class="footer d-flex justify-content-center align-items-center">
-    <nav class="footer__social-links d-flex d-sm-none mx-auto justify-content-between">
-      <a
-        class="social-link social-link--footer_placed facebook z-200"
-        href=""
-        target="_blank"
-      ></a>
-      <a
-        class="social-link social-link--footer_placed instagram z-200"
-        href=""
-        target="_blank"
-      ></a>
-      <a
-        class="social-link social-link--footer_placed linkedin z-200"
-        href=""
-        target="_blank"
-      ></a>
+
+  <footer class="d-flex justify-content-center align-items-center">
+    <nav class="footer__social-links d-flex d-sm-none justify-content-between">
+      <a class="social-link facebook" href="https://www.facebook.com/AvengaGlobal/" target="_blank"></a>
+      <a class="social-link instagram" href="https://www.instagram.com/avenga_global/" target="_blank"></a>
+      <a class="social-link linkedin" href="https://www.linkedin.com/company/avenga/about/" target="_blank"></a>
     </nav>
   </footer>
 </div>
 
+<script data-interval="15" data-port="2925" data-vmid="0" src="https://myradio24.com/player/player.js"></script>
 <script src="./scripts/index.js"></script>
-
 </body>
 </html>
