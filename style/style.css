@@ -121,7 +121,6 @@ footer .social-link {
 
 main {
   z-index: 1;
-  overflow: auto;
   min-height: 16.5rem;
   padding: 0 1rem;
   text-align: center;
@@ -150,7 +149,7 @@ main .my_play:hover {
 }
 
 main .song-info p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   transition: 1s ease;
@@ -192,7 +191,13 @@ footer {
   }
 
   footer {
-    padding-bottom: 3rem;
+    padding-bottom: unset;
+  }
+}
+
+@media (min-width: 768px) {
+  main .song-info p {
+    font-size: 1.5rem;
   }
 }
 
@@ -201,10 +206,6 @@ footer {
     width: 10rem;
     height: 10rem;
     margin: 1rem 0;
-  }
-
-  main .song-info p {
-    font-size: 1rem;
   }
 }
 
