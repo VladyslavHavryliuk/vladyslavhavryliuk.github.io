@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
+  handleChangingSongName();
+  removeTimer();
+});
+
+function handleChangingSongName() {
   let oldSongName = '';
   const displayNoneClass = 'd-none';
   const scriptNameNode = document.querySelector('div[data-myinfo="song"]');
@@ -28,9 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   observer.observe(scriptNameNode, eventConfig);
+}
 
-  // Remove listening timer from player.js
+// Remove listening timer created by player.js
+function removeTimer() {
   setTimeout(() => {
     document.querySelector('div.my_timer').remove();
   }, 1000);
-});
+}
