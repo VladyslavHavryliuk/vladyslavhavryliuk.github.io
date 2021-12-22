@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function handleChangingSongName() {
   let oldSongName = '';
-  const displayNoneClass = 'd-none';
   const scriptNameNode = document.querySelector('div[data-myinfo="song"]');
   const songNode = document.querySelector('.song-info .song');
   const artistNode = document.querySelector('.song-info .artist');
@@ -22,14 +21,11 @@ function handleChangingSongName() {
         oldSongName = mutation.target.textContent;
         const splitName = mutation.target.textContent.split(' - ');
         if (splitName.length > 1) {
-          if (artistNode.classList.contains(displayNoneClass)) {
-            artistNode.classList.remove(displayNoneClass);
-          }
           artistNode.innerHTML = splitName[0];
           songNode.innerHTML = splitName.slice(1, splitName.length).join(' - ');
         } else {
           songNode.innerHTML = mutation.target.textContent;
-          artistNode.classList.add(displayNoneClass);
+          artistNode.innerHTML = '&#917536;';
         }
       }
     }
@@ -46,6 +42,6 @@ function handleSpaceKey(event) {
 // Remove listening timer created by player.js
 function removeTimer() {
   setTimeout(() => {
-    document.querySelector('div.my_timer').remove();
+    document.querySelector('div.my_player div.my_timer').remove();
   }, 1000);
 }
