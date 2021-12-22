@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   handleChangingSongName();
   removeTimer();
+
+  document.addEventListener('keydown', handleSpaceKey);
 });
 
 function handleChangingSongName() {
@@ -33,6 +35,12 @@ function handleChangingSongName() {
     }
   });
   observer.observe(scriptNameNode, eventConfig);
+}
+
+function handleSpaceKey(event) {
+  if ((event.code && event.code === 'Space') || (event.key && event.key === ' ')) {
+    document.querySelector('div.my_player div.my_play').click();
+  }
 }
 
 // Remove listening timer created by player.js
